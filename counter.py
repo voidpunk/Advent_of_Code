@@ -29,8 +29,8 @@ for year in os.listdir():
             del len_dict['Text']
             plt.figure(figsize=(6,6))
             plt.pie(
-                x=sorted(len_dict.values()),
-                labels=sorted(len_dict.keys()),
+                x=len_dict.values(),
+                labels=len_dict.keys(),
                 colors=sns.color_palette('muted')
                 )
             plt.savefig(os.path.join(year, day, 'plot.png'), format='png')
