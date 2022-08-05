@@ -38,14 +38,14 @@ for year in os.listdir():
         for day in sorted(os.listdir(year)):
             len_dict = {}
             for program in os.listdir(os.path.join(year, day)):
-                if program.endswith('png'):
-                    continue
                 path = os.path.join(year, day, program)
+                if program.endswith('png') or os.path.isdir(path):
+                    continue
                 name = lang_dict[path.split('.')[-1]]
                 with open(path, 'r') as file:
                     length = len(file.read())
                 len_dict[name] = length
-            del len_dict['Text']
+            if 'Text' in len_dict: del len_dict['Text']
             len_dict = {k: v for k, v in sorted(
                 len_dict.items(), key=lambda item: item[1], reverse=True)
                 }
