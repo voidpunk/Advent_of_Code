@@ -20,6 +20,19 @@ def func(pct, data):
     key = list(data.keys())[list(data.values()).index(val)]
     return "{:.1f} %\n({})".format(pct, data[key])
 
+def plot_save(dictionary, path):
+    plt.figure(figsize=(6,6))
+    plt.pie(
+        x=dictionary.values(),
+        labels=dictionary.keys(),
+        colors=sns.color_palette('colorblind'),
+        autopct=lambda pct: func(pct, dictionary),
+        pctdistance=0.75
+        )
+    plt.savefig(path, format='png')
+
+total_len_dict = {}
+
 for year in os.listdir():
     if os.path.isdir(year) and year[:2] == '20':
         for day in sorted(os.listdir(year)):
@@ -36,14 +49,10 @@ for year in os.listdir():
             len_dict = {k: v for k, v in sorted(
                 len_dict.items(), key=lambda item: item[1], reverse=True)
                 }
+            total_len_dict.update(len_dict)
             print(len_dict)
-            plt.figure(figsize=(6,6))
-            plt.pie(
-                x=len_dict.values(),
-                labels=len_dict.keys(),
-                colors=sns.color_palette('colorblind'),
-                autopct=lambda pct: func(pct, len_dict),
-                pctdistance=0.75
-                )
-            plt.savefig(os.path.join(year, day, 'plot.png'), format='png')
+            plot_save(len_dict, os.path.join(year, day, 'plot.png'))
             print()
+print()
+print(total_len_dict)
+plot_save(total_len_dict, "./total.png")
