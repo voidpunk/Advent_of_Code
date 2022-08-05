@@ -1,7 +1,7 @@
 with open('./input.txt', 'r') as file:
     problem_input = file.read()
 
-# ------------------------------------------------------------------------------
+
 # Pt. 1
 
 coordinates = [0, 0]
@@ -23,7 +23,7 @@ for direction in problem_input:
 
 print(len(set(coordinates_list)))
 
-# ------------------------------------------------------------------------------
+
 # Pt. 2
 
 coord_santa, coord_robot = [0, 0], [0, 0]
