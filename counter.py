@@ -49,10 +49,13 @@ for year in os.listdir():
             len_dict = {k: v for k, v in sorted(
                 len_dict.items(), key=lambda item: item[1], reverse=True)
                 }
-            total_len_dict.update(len_dict)
-            print(len_dict)
+            for key in len_dict.keys():
+                if key in total_len_dict:
+                    total_len_dict[key] += len_dict[key]
+                else:
+                    total_len_dict[key] = len_dict[key]
+            print(f"Date {year+'/'+day}:\n", len_dict)
             plot_save(len_dict, os.path.join(year, day, 'plot.png'))
             print()
-print()
-print(total_len_dict)
+print('TOTAL:\n', total_len_dict)
 plot_save(total_len_dict, "./total.png")
