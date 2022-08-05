@@ -7,16 +7,16 @@ coordinates = [0, 0]
 coordinates_list = [tuple(coordinates)]
 
 for direction in problem_input:
-    
+
     match direction:
-        case 'v':
-            coordinates[1] -= 1
-        case '^':
-            coordinates[1] += 1
         case '<':
             coordinates[0] -= 1
         case '>':
             coordinates[0] += 1
+        case 'v':
+            coordinates[1] -= 1
+        case '^':
+            coordinates[1] += 1
     
     coordinates_list.append(tuple(coordinates))
 
