@@ -1,5 +1,3 @@
-import numpy as np
-
 with open('./input.txt', 'r') as file:
     problem_input = file.read()
 
