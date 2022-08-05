@@ -13,11 +13,13 @@ int main (void) {
         string_key = problem_input + std::to_string(i);
         result = md5(string_key);
 
+        // Pt. 1
         if (run_once && result.substr(0, 5) == "00000") {
             run_once = false;
             std::cout << i << std::endl;
         }
 
+        // Pt. 2
         if (result.substr(0, 6) == "000000") {
             std::cout << i << std::endl;
             break;
