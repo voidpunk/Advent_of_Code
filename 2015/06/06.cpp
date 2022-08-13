@@ -91,4 +91,4 @@ std::pair<int, int> read_cordinates (std::vector<string> line, int position) {
     return coord_int;
 }
 
-// 3.2 ms ± 2.1 ms (1k runs, 10 warmups) - Clang 14.0.6: clang++ -O3 -std=C++20
+// 3.2 ms ± 2.1 ms (1k runs, 10 warmup) - Clang 14.0.6: clang++ -O3 -std=C++20

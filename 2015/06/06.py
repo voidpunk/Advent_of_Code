@@ -52,4 +52,4 @@ with open('./input.txt', 'r') as file:
 print(sum(sum(array_pt1)))
 print(sum(sum(array_pt2)))
 
-# 124.2 ms ±  42.3 ms (100 runs) - Python 3.10.5 (conda-forge)
+# 124.2 ms ±  42.3 ms (100 runs, 10 warmup) - Python 3.10.5 (conda-forge)
