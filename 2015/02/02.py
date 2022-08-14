@@ -7,3 +7,5 @@ def calculate_wrapping_paper(x, y, z):
     return  2*sum(surfaces) + min(surfaces)
 
 print(sum([calculate_wrapping_paper(*el.split('x')) for el in problem_input]))
+
+# 14.1 ms ±  4.9 ms (1000 runs, 100 warmup) - Python 3.10.5 (conda-forge)

@@ -60,3 +60,5 @@ int calculateWrappingPaper(std::vector<std::string> stringVector) {
 
     return total;
 }
+
+// 0.7 ms ± 0.9 ms (10k runs, 1k warmup) - Clang 14.0.6: clang++ -O3 -std=C++20

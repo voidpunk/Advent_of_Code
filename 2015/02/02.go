@@ -47,3 +47,5 @@ func min(arr []int) int {
 	}
 	return res
 }
+
+// 0.7 ms ± 0.6 ms (10k runs, 1k warmup) - Go 1.19: build

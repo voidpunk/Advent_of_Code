@@ -12,3 +12,5 @@ function calculateWrappingPaper(numStr) {
 
 let result = problemInput.map(calculateWrappingPaper);
 console.log(result.reduce((a, b) => (a + b)));
+
+// 84.6 ms ± 28.0 ms (1000 runs, 100 warmup) - Node.js 18.6.0 (conda-forge)

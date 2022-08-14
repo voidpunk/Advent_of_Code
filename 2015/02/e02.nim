@@ -16,3 +16,4 @@ for el in problemInput:
     total += calculateWrappingPaper(el.split("x"))
 echo total
 
+# 0.5 ms ± 0.6 ms (10k runs, 1k warmup) - Nim 1.6.6 : -d:release 

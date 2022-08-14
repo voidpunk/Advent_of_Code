@@ -26,3 +26,5 @@ fn calculate_wrapping_paper(a: i32, b: i32, c: i32) -> i32 {
     let sum: i32 = surfaces.iter().sum();
     return 2*sum + min
 }
+
+// 0.5 ms ± 0.6 ms (10k runs, 1k warmup) - Rustc 1.61.0: -opt-level=3
