@@ -18,7 +18,11 @@ lang_dict = {
 def func(pct, data):
     val = int(np.round(pct/100.*np.sum(list(data.values()))))
     key = list(data.keys())[list(data.values()).index(val)]
-    return "{:.1f} %\n({})".format(pct, data[key])
+    if pct > 5:
+        return "{:.1f} %\n({})".format(pct, data[key])
+    else:
+        return ""
+
 
 def plot_save(dictionary, path):
     plt.figure(figsize=(6,6))
