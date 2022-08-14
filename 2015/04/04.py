@@ -1,6 +1,6 @@
 import hashlib
 
-problem_input='ckczppom'
+problem_input = 'ckczppom'
 
 run_once = True
 for i in range(10_000_000):
@@ -16,3 +16,5 @@ for i in range(10_000_000):
     if result[:6] == '000000':
         print(i)
         break
+
+# 2811 ms ±  574 ms (20 runs, 10 warmup) - Python 3.10.5 (conda-forge)

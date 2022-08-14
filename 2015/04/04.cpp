@@ -8,7 +8,7 @@ int main (void) {
     std::string string_key, result;
     
     bool run_once = true;
-    for (int i = 0; i < 10'000'000; i++) {
+    for (unsigned int i = 0; i < 10'000'000; i++) {
 
         string_key = problem_input + std::to_string(i);
         result = md5(string_key);
@@ -28,3 +28,4 @@ int main (void) {
 
 }
 
+// 3489 ms ± 584 ms (20 runs, 10 warmup) - Clang 14.0.6: clang++ -Ofast -std=C++20
