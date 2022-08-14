@@ -99,4 +99,4 @@ int main (void) {
 
 }
 
-
+// 1.1 ms ± 1.4 ms (10k runs, 1k warmup) - Clang 14.0.6: clang++ -O3 -std=C++20
