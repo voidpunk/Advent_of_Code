@@ -18,7 +18,7 @@ lang_dict = {
 def func(pct, data):
     val = int(np.round(pct/100.*np.sum(list(data.values()))))
     key = list(data.keys())[list(data.values()).index(val)]
-    if pct > 5:
+    if pct > 4:
         return "{:.1f} %\n({})".format(pct, data[key])
     else:
         return ""
