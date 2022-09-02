@@ -11,6 +11,6 @@ Advent of Code in many languages for exercise.
 1) If you are curious of the proportion of code written in different programming languages to solve the same problem, you can take a look at the plot inside each folder! :)
 2) I try to use the same logic in different programming languages when it is possible to do it while still remaining idiomatic, which is the majority of the case but not all of them!
 
-**NEWS**: from now on I'm adding the benchmark as comment in the last line of the source file (I'll update the ones already pushed without it in the future). All benchmarks are made with [hyperfine](https://github.com/sharkdp/hyperfine) on a Dell Inspiron 15 7510 running an i7-11800H @ 4.6 GHz on Manjaro Linux.
+**NEWS**: from now on I'm adding the benchmark as comment in the last line of the source file (I'll update the ones already pushed without it in the future). All benchmarks are made with [hyperfine](https://github.com/sharkdp/hyperfine) on a Dell Inspiron 15 7510 running an i7-11800H @ 4.6 GHz on Arch Linux.
 
 ![](total.png)
