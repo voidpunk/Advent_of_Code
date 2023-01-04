@@ -1,3 +1,5 @@
 .vscode
 rust
 temp
+
+rust_build
