@@ -6,8 +6,8 @@ int main (void) {
 
     std::string problem_input = "ckczppom";
     std::string string_key, result;
-    
     bool run_once = true;
+
     for (unsigned int i = 0; i < 10'000'000; i++) {
 
         string_key = problem_input + std::to_string(i);
@@ -28,4 +28,4 @@ int main (void) {
 
 }
 
-// 3489 ms ± 584 ms (20 runs, 10 warmup) - Clang 14.0.6: clang++ -Ofast -std=C++20
+// 3233 ms ± 70 ms (50 runs, 25 warmup) - Clang 14.0.6: clang++ -O3 -std=C++20
